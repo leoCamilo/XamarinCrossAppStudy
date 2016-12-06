@@ -12,7 +12,7 @@
   - json request from [openweathermap](https://openweathermap.org/) API
   - img download
 
-- Native Calls with [DependencyService](https://developer.xamarin.com/guides/xamarin-forms/dependency-service/) [*only works on android because I don't have a mac =(*]
+- Native Calls with [DependencyService](https://developer.xamarin.com/guides/xamarin-forms/dependency-service/) [*only works on android because I don't have a mac =(* ]
   - Test [Notification Lab](https://developer.xamarin.com/samples/monodroid/android5.0/NotificationsLab/)
   - Get Accelerometer data
   - Test Speak From Text Interface
