@@ -8,7 +8,7 @@
 	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 	<uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
 	<uses-permission android:name="android.permission.INTERNET" />
-	<application android:label="CrossAppStudy.Droid">
-    <meta-data android:name="com.google.android.maps.v2.API_KEY" android:value="AIzaSyAD24i_hm2ti0u25OmGUkV04-DghTfzUvQ" />
+	<application android:label="CrossAppStudy.Droid" android:icon="@drawable/icon">
+		<meta-data android:name="com.google.android.maps.v2.API_KEY" android:value="AIzaSyAD24i_hm2ti0u25OmGUkV04-DghTfzUvQ" />
 	</application>
 </manifest>
