@@ -8,6 +8,7 @@
 - [Device](https://developer.xamarin.com/guides/xamarin-forms/platform-features/device/) calls
 - [Custom Renderes](https://developer.xamarin.com/guides/xamarin-forms/custom-renderer/)
 - Map using [Xamarin.Forms.Maps](https://developer.xamarin.com/guides/xamarin-forms/user-interface/map/)
+- [.JAR binding](https://developer.xamarin.com/guides/android/advanced_topics/binding-a-java-library/) on Android
 - Http Request with [System.Net.Http](https://www.nuget.org/packages/System.Net.Http)
   - json request from [openweathermap](https://openweathermap.org/) API
   - img download
