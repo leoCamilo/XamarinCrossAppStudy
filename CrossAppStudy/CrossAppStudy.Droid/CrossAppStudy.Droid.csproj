@@ -178,6 +178,10 @@
     <AndroidResource Include="Resources\values\styles.xml" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\jarBinding\jarBinding.csproj">
+      <Project>{df3f91e1-1992-413f-9983-b0d3fe308104}</Project>
+      <Name>jarBinding</Name>
+    </ProjectReference>
     <ProjectReference Include="..\CrossAppStudy\CrossAppStudy.csproj">
       <Project>{ebb1e95e-9f9d-4d9e-a6da-886ad0a76f94}</Project>
       <Name>CrossAppStudy</Name>
