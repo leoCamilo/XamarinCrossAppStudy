@@ -2489,11 +2489,14 @@ namespace CrossAppStudy.Droid
 			// aapt resource value: 0x7f0200cc
 			public const int mr_ic_play_light = 2130837708;
 			
-			// aapt resource value: 0x7f0200ce
-			public const int notification_template_icon_bg = 2130837710;
+			// aapt resource value: 0x7f0200cf
+			public const int notification_template_icon_bg = 2130837711;
 			
 			// aapt resource value: 0x7f0200cd
-			public const int x_bldg = 2130837709;
+			public const int timelineImg = 2130837709;
+			
+			// aapt resource value: 0x7f0200ce
+			public const int x_bldg = 2130837710;
 			
 			static Drawable()
 			{

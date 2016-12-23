@@ -6,6 +6,8 @@ using System.Text;
 
 using Xamarin.Forms;
 using CrossAppStudy.CustomViews;
+using CrossAppStudy.model;
+
 using System.Collections.ObjectModel;
 
 namespace CrossAppStudy.pages {
@@ -78,35 +80,41 @@ namespace CrossAppStudy.pages {
 
         private StackLayout populateUList ()
         {
-            var list = new ListView();
+            // string url = "http://forcaeinteligencia.com/wp-content/uploads/2013/09/batata-ou-batata-doce.png";
+            // string url = "http://res.cloudinary.com/churches/image/upload/v1479304288/flktecyzx6rbmi3ttmi8.jpg";
+            string url = "timelineImg.png";
+
+            var list = new ListView(ListViewCachingStrategy.RecycleElement) { HasUnevenRows = true };
+            list.ItemTemplate = new DataTemplate(typeof(CustomCell));
+
             var addBtn = new CustomBtn { Text = "add" };
 
             list.IsPullToRefreshEnabled = true;
             list.Refreshing += async (sender, e) => await DisplayAlert("Loading", "Atualizando", "OK");
 
-            ObservableCollection<string> strList = new ObservableCollection<string>();
+            ObservableCollection<TimelineItem> strList = new ObservableCollection<TimelineItem>();
             list.ItemsSource = strList;
 
-            for (int i = 0; i < 50; i++)
-                strList.Add("item " + i);
+            for (int i = 0; i < 10; i++)
+                strList.Add(new TimelineItem("text " + i, url));
 
             list.ItemTapped += (sender, e) => {
                 DisplayAlert("item", (string)((ListView)sender).SelectedItem, "OK");
                 ((ListView)sender).SelectedItem = null;
             };
 
-            list.ItemAppearing += (sender, e) => {  // called to every element showen
+            list.ItemAppearing += (sender, e) => {  // called to every element shown
                 var listSize = strList.Count();
                 var current = e.Item;
                 var last = strList.ElementAt(listSize - 1);
 
                 if (current == last) {
                     for (int i = 0; i < 10; i++)
-                        strList.Add("new pool " + i);
+                        strList.Add(new TimelineItem("New Pool " + i, url));
                 }
             };
 
-            addBtn.Clicked += (sender, e) => strList.Add("item extra");
+            addBtn.Clicked += (sender, e) => strList.Add(new TimelineItem("Novo", url));
 
             return new StackLayout {
                 Children = { addBtn, list }

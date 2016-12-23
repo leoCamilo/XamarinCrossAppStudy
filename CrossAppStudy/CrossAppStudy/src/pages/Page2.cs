@@ -131,6 +131,8 @@ namespace CrossAppStudy.pages {
         private async Task downloadByUrl()
         {
             string url = "http://forcaeinteligencia.com/wp-content/uploads/2013/09/batata-ou-batata-doce.png";
+            // string url = "http://res.cloudinary.com/churches/image/upload/v1479304288/flktecyzx6rbmi3ttmi8.jpg";
+
             var bytes = await Rest.download(url);
 
             Image img = new Image();
